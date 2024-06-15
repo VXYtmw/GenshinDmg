@@ -1,2 +1,2 @@
 # GenshinDmg
-backend
+Backend of the Genshin project.
