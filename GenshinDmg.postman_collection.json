@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "372e034a-4dc6-4def-b10b-ec367bc69494",
-		"name": "Genshin",
+		"name": "GenshinDmg",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "28289127"
 	},
@@ -24,11 +24,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/login",
+							"raw": "{{baseUrl}}/user/login",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
+								"user",
 								"login"
 							]
 						}
@@ -50,11 +51,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/register",
+							"raw": "{{baseUrl}}/user/register",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
+								"user",
 								"register"
 							]
 						}
@@ -79,17 +81,89 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/verify?mail=ruicheng_ao@foxmail.com",
+							"raw": "{{baseUrl}}/user/verify?mail=ruicheng_ao@foxmail.com",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
+								"user",
 								"verify"
 							],
 							"query": [
 								{
 									"key": "mail",
 									"value": "ruicheng_ao@foxmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "用户名重复检测",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/user/checkUserName?userName=user",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"checkUserName"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "user"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "邮箱重复检测",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/uesr/checkMail?mail=ruicheng_ao@foxmail.com",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"uesr",
+								"checkMail"
+							],
+							"query": [
+								{
+									"key": "mail",
+									"value": "ruicheng_ao@foxmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "用户删除",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/user?userName=arc",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "arc"
 								}
 							]
 						}
@@ -116,12 +190,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/artifact",
+							"raw": "{{baseUrl}}/artifact/input",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"artifact"
+								"artifact",
+								"input"
 							]
 						}
 					},
@@ -142,11 +217,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/calculate",
+							"raw": "{{baseUrl}}/artifact/calculate",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
+								"artifact",
 								"calculate"
 							]
 						}
@@ -159,7 +235,31 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/artifact?userName=user",
+							"raw": "{{baseUrl}}/artifact/getAll?userName=user",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"artifact",
+								"getAll"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "user"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "圣遗物删除",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/artifact?artifactId=3",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -168,9 +268,35 @@
 							],
 							"query": [
 								{
-									"key": "userName",
-									"value": "user"
+									"key": "artifactId",
+									"value": "3"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "圣遗物修改",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"artifactId\": 3,\r\n    \"suit\": \"Crimson Witch of Flames\",  // 套装\r\n    \"part\": \"flower\",  // 部位\r\n    \"attributes\": [  // 圣遗物属性列表（有且仅有5个对象）\r\n        {\r\n            \"name\": \"health_n\",  // 属性名\r\n            \"value\": 4780  // 值\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/artifact",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"artifact"
 							]
 						}
 					},
