@@ -23,6 +23,7 @@ public class GenshinDmgApplication {
     public static void main(String[] args) {
         SpringApplication.run(GenshinDmgApplication.class, args);
     }
+
     @Bean
     public MultipartConfigElement getMultipartConfigElement() {
         MultipartConfigFactory factory = new MultipartConfigFactory();

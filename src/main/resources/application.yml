@@ -66,12 +66,19 @@ spring:
     protocol: smtps
     port: 465
     host: smtp.qq.com
-    password:
-    username:
+    password: eiwbscoomtyyccfh
+    username: 2031449330@qq.com
     properties:
       mail:
         smtps:
           ssl:
             enable: true
 
-
+# 自定义配置
+session-key:
+  ver-code: VER_CODE
+vercode:
+  length: 6
+  minutes: 5
+  theme: GenshinDmg
+  email-text: 【@{theme}】尊敬的玩家，您本次的验证码为@{vcode}，有效时间为@{minutes}分钟，请尽快进行验证，如果非本人操作请忽略。

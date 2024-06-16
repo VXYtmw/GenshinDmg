@@ -64,6 +64,10 @@ public enum ResultEnum {
     EMAIL_NOT_MATCH(2009, "邮箱不匹配"),
     // 11. 用户被禁用
     USER_DISABLED(2010, "该用户被禁用，请联系管理员"),
+    // 12. 用户已存在
+    USER_FOUND(2011, "用户已存在"),
+    // 13. 验证码不存在
+    VC_NOT_FOUND(2012, "验证码不存在"),
 
     // 商品异常
     // 1. 商品（名）已存在
