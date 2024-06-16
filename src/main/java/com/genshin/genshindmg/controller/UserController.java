@@ -25,7 +25,7 @@ public class UserController extends BaseController {
 
     // 用户名密码登录
     @PostMapping("/login")
-    public JsonResult<UserDTO> signin(@RequestBody SignVo signVo) {
+    public JsonResult<UserDTO> login(@RequestBody SignVo signVo) {
         try {
             UserDTO res = userService.sign(signVo);
             return new JsonResult<>(ResultEnum.OK, res);
@@ -37,7 +37,7 @@ public class UserController extends BaseController {
 
     // 用户注册
     @PostMapping("/register")
-    public JsonResult<UserDTO> signin(@RequestBody RegisterVo registerVo, HttpSession session) {
+    public JsonResult<UserDTO> register(@RequestBody RegisterVo registerVo, HttpSession session) {
         try {
             UserDTO res = userService.register(registerVo, session);
             return new JsonResult<>(ResultEnum.OK, res);

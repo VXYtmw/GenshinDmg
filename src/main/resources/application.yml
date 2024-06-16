@@ -66,8 +66,8 @@ spring:
     protocol: smtps
     port: 465
     host: smtp.qq.com
-    password:
-    username:
+    password: dfhmoaqiykndjbij
+    username: ruicheng_ao@foxmail.com
     properties:
       mail:
         smtps:

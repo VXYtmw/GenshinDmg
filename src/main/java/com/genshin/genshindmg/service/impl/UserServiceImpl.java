@@ -68,11 +68,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         q.eq(User::getUserName, signVo.getUserName());
         // 数据库查询用户
         User user = userMapper.selectOne(q);
-        log.info("从数据库中查出来的用户为:{}", user);
         if (user != null) {
+            log.info("从数据库中查出来的用户为:{}", user);
             // 用户存在则检验用户名和密码是否匹配
             String pswd = ShaUtil.SHA256(signVo.getPassword());
-            log.info(pswd);
             if (!user.getUserPassword().equalsIgnoreCase(pswd)) {
                 // 用户名密码不匹配，抛出异常
                 throw new ShSystemException(ResultEnum.PSWD_ERR);
