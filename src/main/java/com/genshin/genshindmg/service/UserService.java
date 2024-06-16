@@ -1,7 +1,10 @@
 package com.genshin.genshindmg.service;
 
+import com.genshin.genshindmg.dto.UserDTO;
+import com.genshin.genshindmg.dto.vo.SignVo;
 import com.genshin.genshindmg.entities.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import jakarta.servlet.http.HttpSession;
 
 /**
 * @author DELL
@@ -9,5 +12,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
 * @createDate 2024-06-16 15:41:23
 */
 public interface UserService extends IService<User> {
-
+    UserDTO sign(SignVo signVo);
 }
