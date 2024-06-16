@@ -44,8 +44,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         log.info("从数据库中查出来的用户为:{}", user);
         if (user != null) {
             // 用户存在则检验用户名和密码是否匹配
-                String pswd = ShaUtil.SHA256(signVo.getPassword());
-            if (!user.getUserPassword().equals(pswd)) {
+            String pswd = ShaUtil.SHA256(signVo.getPassword());
+            log.info(pswd);
+            if (!user.getUserPassword().equalsIgnoreCase(pswd)) {
                 // 用户名密码不匹配，抛出异常
                 throw new ShSystemException(ResultEnum.PSWD_ERR);
             }
