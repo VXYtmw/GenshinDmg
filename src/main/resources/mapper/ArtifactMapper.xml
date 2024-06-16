@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.genshin.genshindmg.mapper.ArtifactMapper">
+
+    <resultMap id="BaseResultMap" type="com.genshin.genshindmg.entities.Artifact">
+            <id property="artifactId" column="artifact_id" jdbcType="INTEGER"/>
+            <result property="userId" column="user_id" jdbcType="INTEGER"/>
+            <result property="suit" column="suit" jdbcType="INTEGER"/>
+            <result property="part" column="part" jdbcType="INTEGER"/>
+            <result property="primaryAttribute" column="primary_attribute" jdbcType="INTEGER"/>
+            <result property="primaryValue" column="primary_value" jdbcType="FLOAT"/>
+            <result property="secondaryAttribute1" column="secondary_attribute1" jdbcType="INTEGER"/>
+            <result property="secondaryAttribute2" column="secondary_attribute2" jdbcType="INTEGER"/>
+            <result property="secondaryAttribute3" column="secondary_attribute3" jdbcType="INTEGER"/>
+            <result property="secondaryAttribute4" column="secondary_attribute4" jdbcType="INTEGER"/>
+            <result property="secondaryValue1" column="secondary_value1" jdbcType="FLOAT"/>
+            <result property="secondaryValue2" column="secondary_value2" jdbcType="FLOAT"/>
+            <result property="secondaryValue3" column="secondary_value3" jdbcType="FLOAT"/>
+            <result property="secondaryValue4" column="secondary_value4" jdbcType="FLOAT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        artifact_id,user_id,suit,
+        part,primary_attribute,primary_value,
+        secondary_attribute1,secondary_attribute2,secondary_attribute3,
+        secondary_attribute4,secondary_value1,secondary_value2,
+        secondary_value3,secondary_value4
+    </sql>
+</mapper>

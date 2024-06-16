@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.genshin.genshindmg.mapper.ConfigMapper">
+
+    <resultMap id="BaseResultMap" type="com.genshin.genshindmg.entities.Config">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="suitMax" column="suit_max" jdbcType="INTEGER"/>
+            <result property="attributeMax" column="attribute_max" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,suit_max,attribute_max
+    </sql>
+</mapper>

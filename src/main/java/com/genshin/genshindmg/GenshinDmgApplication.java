@@ -17,7 +17,7 @@ import org.springframework.util.unit.DataUnit;
 
 @SpringBootApplication
 @EnableScheduling
-//@MapperScan("com.genshin.genshindmg.mapper")
+@MapperScan("com.genshin.genshindmg.mapper")
 public class GenshinDmgApplication {
 
     public static void main(String[] args) {
