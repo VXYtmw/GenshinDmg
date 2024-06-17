@@ -89,6 +89,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     }
 
     @Override
+    @Transactional
     public UserDTO register(RegisterVo registerVo, HttpSession session) {
         LambdaQueryWrapper<User> q = new LambdaQueryWrapper<>();
         q.eq(User::getUserName, registerVo.getUserName());

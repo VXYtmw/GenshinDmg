@@ -1,5 +1,6 @@
 package com.genshin.genshindmg.service;
 
+import com.genshin.genshindmg.dto.vo.artifact.InputVo;
 import com.genshin.genshindmg.entities.Artifact;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -9,5 +10,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 * @createDate 2024-06-16 15:41:23
 */
 public interface ArtifactService extends IService<Artifact> {
+    // 圣遗物输入
+    Boolean inputArtifact(InputVo inputVo);
+
 
 }

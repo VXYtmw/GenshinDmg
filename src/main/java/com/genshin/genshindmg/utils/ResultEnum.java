@@ -69,11 +69,9 @@ public enum ResultEnum {
     // 13. 验证码不存在
     VC_NOT_FOUND(2012, "验证码不存在"),
 
-    // 商品异常
-    // 1. 商品（名）已存在
-    GOOD_DUP(3000, "商品名已存在"),
-    // 2. 商品不存在
-    GOOD_NOT_FOUND(3001, "商品不存在");
+    // 圣遗物数据异常
+    // 1. 圣遗物不符合要求
+    ARTIFACT_INVALID(3000, "圣遗物不符合要求");
 
     private final Integer state;
     private final String message;
