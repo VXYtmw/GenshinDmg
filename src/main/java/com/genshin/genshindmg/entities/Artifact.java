@@ -28,62 +28,62 @@ public class Artifact implements Serializable {
     /**
      * 
      */
-    private Integer suit;
+    private Integer artifactSet;
 
     /**
      * 
      */
-    private Integer part;
+    private Integer slot;
 
     /**
      * 
      */
-    private Integer primaryAttribute;
+    private Integer mainStat;
 
     /**
      * 
      */
-    private Double primaryValue;
+    private Double mainValue;
 
     /**
      * 
      */
-    private Integer secondaryAttribute1;
+    private Integer secStat1;
 
     /**
      * 
      */
-    private Integer secondaryAttribute2;
+    private Integer secStat2;
 
     /**
      * 
      */
-    private Integer secondaryAttribute3;
+    private Integer secStat3;
 
     /**
      * 
      */
-    private Integer secondaryAttribute4;
+    private Integer secStat4;
 
     /**
      * 
      */
-    private Double secondaryValue1;
+    private Double secValue1;
 
     /**
      * 
      */
-    private Double secondaryValue2;
+    private Double secValue2;
 
     /**
      * 
      */
-    private Double secondaryValue3;
+    private Double secValue3;
 
     /**
      * 
      */
-    private Double secondaryValue4;
+    private Double secValue4;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
@@ -102,18 +102,18 @@ public class Artifact implements Serializable {
         Artifact other = (Artifact) that;
         return (this.getArtifactId() == null ? other.getArtifactId() == null : this.getArtifactId().equals(other.getArtifactId()))
             && (this.getUserId() == null ? other.getUserId() == null : this.getUserId().equals(other.getUserId()))
-            && (this.getSuit() == null ? other.getSuit() == null : this.getSuit().equals(other.getSuit()))
-            && (this.getPart() == null ? other.getPart() == null : this.getPart().equals(other.getPart()))
-            && (this.getPrimaryAttribute() == null ? other.getPrimaryAttribute() == null : this.getPrimaryAttribute().equals(other.getPrimaryAttribute()))
-            && (this.getPrimaryValue() == null ? other.getPrimaryValue() == null : this.getPrimaryValue().equals(other.getPrimaryValue()))
-            && (this.getSecondaryAttribute1() == null ? other.getSecondaryAttribute1() == null : this.getSecondaryAttribute1().equals(other.getSecondaryAttribute1()))
-            && (this.getSecondaryAttribute2() == null ? other.getSecondaryAttribute2() == null : this.getSecondaryAttribute2().equals(other.getSecondaryAttribute2()))
-            && (this.getSecondaryAttribute3() == null ? other.getSecondaryAttribute3() == null : this.getSecondaryAttribute3().equals(other.getSecondaryAttribute3()))
-            && (this.getSecondaryAttribute4() == null ? other.getSecondaryAttribute4() == null : this.getSecondaryAttribute4().equals(other.getSecondaryAttribute4()))
-            && (this.getSecondaryValue1() == null ? other.getSecondaryValue1() == null : this.getSecondaryValue1().equals(other.getSecondaryValue1()))
-            && (this.getSecondaryValue2() == null ? other.getSecondaryValue2() == null : this.getSecondaryValue2().equals(other.getSecondaryValue2()))
-            && (this.getSecondaryValue3() == null ? other.getSecondaryValue3() == null : this.getSecondaryValue3().equals(other.getSecondaryValue3()))
-            && (this.getSecondaryValue4() == null ? other.getSecondaryValue4() == null : this.getSecondaryValue4().equals(other.getSecondaryValue4()));
+            && (this.getArtifactSet() == null ? other.getArtifactSet() == null : this.getArtifactSet().equals(other.getArtifactSet()))
+            && (this.getSlot() == null ? other.getSlot() == null : this.getSlot().equals(other.getSlot()))
+            && (this.getMainStat() == null ? other.getMainStat() == null : this.getMainStat().equals(other.getMainStat()))
+            && (this.getMainValue() == null ? other.getMainValue() == null : this.getMainValue().equals(other.getMainValue()))
+            && (this.getSecStat1() == null ? other.getSecStat1() == null : this.getSecStat1().equals(other.getSecStat1()))
+            && (this.getSecStat2() == null ? other.getSecStat2() == null : this.getSecStat2().equals(other.getSecStat2()))
+            && (this.getSecStat3() == null ? other.getSecStat3() == null : this.getSecStat3().equals(other.getSecStat3()))
+            && (this.getSecStat4() == null ? other.getSecStat4() == null : this.getSecStat4().equals(other.getSecStat4()))
+            && (this.getSecValue1() == null ? other.getSecValue1() == null : this.getSecValue1().equals(other.getSecValue1()))
+            && (this.getSecValue2() == null ? other.getSecValue2() == null : this.getSecValue2().equals(other.getSecValue2()))
+            && (this.getSecValue3() == null ? other.getSecValue3() == null : this.getSecValue3().equals(other.getSecValue3()))
+            && (this.getSecValue4() == null ? other.getSecValue4() == null : this.getSecValue4().equals(other.getSecValue4()));
     }
 
     @Override
@@ -122,18 +122,18 @@ public class Artifact implements Serializable {
         int result = 1;
         result = prime * result + ((getArtifactId() == null) ? 0 : getArtifactId().hashCode());
         result = prime * result + ((getUserId() == null) ? 0 : getUserId().hashCode());
-        result = prime * result + ((getSuit() == null) ? 0 : getSuit().hashCode());
-        result = prime * result + ((getPart() == null) ? 0 : getPart().hashCode());
-        result = prime * result + ((getPrimaryAttribute() == null) ? 0 : getPrimaryAttribute().hashCode());
-        result = prime * result + ((getPrimaryValue() == null) ? 0 : getPrimaryValue().hashCode());
-        result = prime * result + ((getSecondaryAttribute1() == null) ? 0 : getSecondaryAttribute1().hashCode());
-        result = prime * result + ((getSecondaryAttribute2() == null) ? 0 : getSecondaryAttribute2().hashCode());
-        result = prime * result + ((getSecondaryAttribute3() == null) ? 0 : getSecondaryAttribute3().hashCode());
-        result = prime * result + ((getSecondaryAttribute4() == null) ? 0 : getSecondaryAttribute4().hashCode());
-        result = prime * result + ((getSecondaryValue1() == null) ? 0 : getSecondaryValue1().hashCode());
-        result = prime * result + ((getSecondaryValue2() == null) ? 0 : getSecondaryValue2().hashCode());
-        result = prime * result + ((getSecondaryValue3() == null) ? 0 : getSecondaryValue3().hashCode());
-        result = prime * result + ((getSecondaryValue4() == null) ? 0 : getSecondaryValue4().hashCode());
+        result = prime * result + ((getArtifactSet() == null) ? 0 : getArtifactSet().hashCode());
+        result = prime * result + ((getSlot() == null) ? 0 : getSlot().hashCode());
+        result = prime * result + ((getMainStat() == null) ? 0 : getMainStat().hashCode());
+        result = prime * result + ((getMainValue() == null) ? 0 : getMainValue().hashCode());
+        result = prime * result + ((getSecStat1() == null) ? 0 : getSecStat1().hashCode());
+        result = prime * result + ((getSecStat2() == null) ? 0 : getSecStat2().hashCode());
+        result = prime * result + ((getSecStat3() == null) ? 0 : getSecStat3().hashCode());
+        result = prime * result + ((getSecStat4() == null) ? 0 : getSecStat4().hashCode());
+        result = prime * result + ((getSecValue1() == null) ? 0 : getSecValue1().hashCode());
+        result = prime * result + ((getSecValue2() == null) ? 0 : getSecValue2().hashCode());
+        result = prime * result + ((getSecValue3() == null) ? 0 : getSecValue3().hashCode());
+        result = prime * result + ((getSecValue4() == null) ? 0 : getSecValue4().hashCode());
         return result;
     }
 
@@ -145,18 +145,18 @@ public class Artifact implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", artifactId=").append(artifactId);
         sb.append(", userId=").append(userId);
-        sb.append(", suit=").append(suit);
-        sb.append(", part=").append(part);
-        sb.append(", primaryAttribute=").append(primaryAttribute);
-        sb.append(", primaryValue=").append(primaryValue);
-        sb.append(", secondaryAttribute1=").append(secondaryAttribute1);
-        sb.append(", secondaryAttribute2=").append(secondaryAttribute2);
-        sb.append(", secondaryAttribute3=").append(secondaryAttribute3);
-        sb.append(", secondaryAttribute4=").append(secondaryAttribute4);
-        sb.append(", secondaryValue1=").append(secondaryValue1);
-        sb.append(", secondaryValue2=").append(secondaryValue2);
-        sb.append(", secondaryValue3=").append(secondaryValue3);
-        sb.append(", secondaryValue4=").append(secondaryValue4);
+        sb.append(", artifactSet=").append(artifactSet);
+        sb.append(", slot=").append(slot);
+        sb.append(", mainStat=").append(mainStat);
+        sb.append(", mainValue=").append(mainValue);
+        sb.append(", secStat1=").append(secStat1);
+        sb.append(", secStat2=").append(secStat2);
+        sb.append(", secStat3=").append(secStat3);
+        sb.append(", secStat4=").append(secStat4);
+        sb.append(", secValue1=").append(secValue1);
+        sb.append(", secValue2=").append(secValue2);
+        sb.append(", secValue3=").append(secValue3);
+        sb.append(", secValue4=").append(secValue4);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

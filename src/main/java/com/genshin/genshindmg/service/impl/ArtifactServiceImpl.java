@@ -73,18 +73,18 @@ public class ArtifactServiceImpl extends ServiceImpl<ArtifactMapper, Artifact>
         // 保存圣遗物数据
         Artifact a = new Artifact();
         a.setUserId(user.getUserId());
-        a.setSuit(TableMappingUtil.getSetInt(inputVo.getSet()));
-        a.setPart(TableMappingUtil.getSlotInt(inputVo.getSlot()));
-        a.setPrimaryAttribute(TableMappingUtil.getStatInt(inputVo.getMainStat().getName()));
-        a.setSecondaryAttribute1(TableMappingUtil.getStatInt(inputVo.getSubStat().get(0).getName()));
-        a.setSecondaryAttribute2(TableMappingUtil.getStatInt(inputVo.getSubStat().get(1).getName()));
-        a.setSecondaryAttribute3(TableMappingUtil.getStatInt(inputVo.getSubStat().get(2).getName()));
-        a.setSecondaryAttribute4(TableMappingUtil.getStatInt(inputVo.getSubStat().get(3).getName()));
-        a.setPrimaryValue(inputVo.getMainStat().getValue());
-        a.setSecondaryValue1(inputVo.getSubStat().get(0).getValue());
-        a.setSecondaryValue2(inputVo.getSubStat().get(1).getValue());
-        a.setSecondaryValue3(inputVo.getSubStat().get(2).getValue());
-        a.setSecondaryValue4(inputVo.getSubStat().get(3).getValue());
+        a.setArtifactSet(TableMappingUtil.getSetInt(inputVo.getSet()));
+        a.setSlot(TableMappingUtil.getSlotInt(inputVo.getSlot()));
+        a.setMainStat(TableMappingUtil.getStatInt(inputVo.getMainStat().getName()));
+        a.setSecStat1(TableMappingUtil.getStatInt(inputVo.getSubStat().get(0).getName()));
+        a.setSecStat2(TableMappingUtil.getStatInt(inputVo.getSubStat().get(1).getName()));
+        a.setSecStat3(TableMappingUtil.getStatInt(inputVo.getSubStat().get(2).getName()));
+        a.setSecStat4(TableMappingUtil.getStatInt(inputVo.getSubStat().get(3).getName()));
+        a.setMainValue(inputVo.getMainStat().getValue());
+        a.setSecValue1(inputVo.getSubStat().get(0).getValue());
+        a.setSecValue2(inputVo.getSubStat().get(1).getValue());
+        a.setSecValue3(inputVo.getSubStat().get(2).getValue());
+        a.setSecValue4(inputVo.getSubStat().get(3).getValue());
         if (1 != artifactMapper.insert(a)) {
             throw new ShSystemException(ResultEnum.INSERT);
         }

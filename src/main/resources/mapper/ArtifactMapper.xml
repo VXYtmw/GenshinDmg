@@ -7,25 +7,25 @@
     <resultMap id="BaseResultMap" type="com.genshin.genshindmg.entities.Artifact">
             <id property="artifactId" column="artifact_id" jdbcType="INTEGER"/>
             <result property="userId" column="user_id" jdbcType="INTEGER"/>
-            <result property="suit" column="suit" jdbcType="INTEGER"/>
-            <result property="part" column="part" jdbcType="INTEGER"/>
-            <result property="primaryAttribute" column="primary_attribute" jdbcType="INTEGER"/>
-            <result property="primaryValue" column="primary_value" jdbcType="FLOAT"/>
-            <result property="secondaryAttribute1" column="secondary_attribute1" jdbcType="INTEGER"/>
-            <result property="secondaryAttribute2" column="secondary_attribute2" jdbcType="INTEGER"/>
-            <result property="secondaryAttribute3" column="secondary_attribute3" jdbcType="INTEGER"/>
-            <result property="secondaryAttribute4" column="secondary_attribute4" jdbcType="INTEGER"/>
-            <result property="secondaryValue1" column="secondary_value1" jdbcType="FLOAT"/>
-            <result property="secondaryValue2" column="secondary_value2" jdbcType="FLOAT"/>
-            <result property="secondaryValue3" column="secondary_value3" jdbcType="FLOAT"/>
-            <result property="secondaryValue4" column="secondary_value4" jdbcType="FLOAT"/>
+            <result property="artifactSet" column="artifact_set" jdbcType="INTEGER"/>
+            <result property="slot" column="slot" jdbcType="INTEGER"/>
+            <result property="mainStat" column="main_stat" jdbcType="INTEGER"/>
+            <result property="mainValue" column="main_value" jdbcType="FLOAT"/>
+            <result property="secStat1" column="sec_stat1" jdbcType="INTEGER"/>
+            <result property="secStat2" column="sec_stat2" jdbcType="INTEGER"/>
+            <result property="secStat3" column="sec_stat3" jdbcType="INTEGER"/>
+            <result property="secStat4" column="sec_stat4" jdbcType="INTEGER"/>
+            <result property="secValue1" column="sec_value1" jdbcType="FLOAT"/>
+            <result property="secValue2" column="sec_value2" jdbcType="FLOAT"/>
+            <result property="secValue3" column="sec_value3" jdbcType="FLOAT"/>
+            <result property="secValue4" column="sec_value4" jdbcType="FLOAT"/>
     </resultMap>
 
     <sql id="Base_Column_List">
-        artifact_id,user_id,suit,
-        part,primary_attribute,primary_value,
-        secondary_attribute1,secondary_attribute2,secondary_attribute3,
-        secondary_attribute4,secondary_value1,secondary_value2,
-        secondary_value3,secondary_value4
+        artifact_id,user_id,artifact_set,
+        slot,main_stat,main_value,
+        sec_stat1,sec_stat2,sec_stat3,
+        sec_stat4,sec_value1,sec_value2,
+        sec_value3,sec_value4
     </sql>
 </mapper>
