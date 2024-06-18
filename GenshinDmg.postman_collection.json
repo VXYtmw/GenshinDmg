@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"userName\": \"user\",\r\n    \"password\": \"123\"\r\n}",
+							"raw": "{\r\n    \"userName\": \"user1\",\r\n    \"password\": \"123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -43,7 +43,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"userName\": \"user\",\r\n    \"password\": \"123\",\r\n    \"mail\": \"ruicheng_ao@foxmail.com\",\r\n    \"verification\": \"abc\"\r\n}",
+							"raw": "{\r\n    \"userName\": \"arc\",\r\n    \"password\": \"123\",\r\n    \"mail\": \"ruicheng_ao@foxmail.com\",\r\n    \"verification\": \"968288\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -105,7 +105,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/user/checkUserName?userName=user",
+							"raw": "{{baseUrl}}/user/checkUserName?userName=user1",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -116,7 +116,7 @@
 							"query": [
 								{
 									"key": "userName",
-									"value": "user"
+									"value": "user1"
 								}
 							]
 						}
@@ -182,7 +182,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"userName\": \"user\",\r\n    \"suit\": \"Crimson Witch of Flames\",  // 套装\r\n    \"part\": \"flower\",  // 部位\r\n    \"attributes\": [  // 圣遗物属性列表（有且仅有5个对象）\r\n        {\r\n            \"name\": \"health_n\",  // 属性名\r\n            \"value\": 4780  // 值\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"userName\": \"user1\",\r\n    \"set\": \"Crimson_Witch_of_Flames\",  // 套装\r\n    \"slot\": \"goblet\",  // 部位\r\n    \"mainStat\":  // 圣遗物主属性\r\n    {\r\n        \"name\": \"Pyro\",\r\n        \"value\": 0.466\r\n    },\r\n    \"subStat\":  // 圣遗物副属性列表（有且仅有4个对象）\r\n    [\r\n        {\r\n            \"name\": \"HP\",  // 属性名\r\n            \"value\": 39  // 值\r\n        },\r\n        {\r\n            \"name\": \"HP(%)\",  // 属性名\r\n            \"value\": 0.053  // 值\r\n        },\r\n        {\r\n            \"name\": \"Mastery\",  // 属性名\r\n            \"value\": 40  // 值\r\n        },\r\n        {\r\n            \"name\": \"CRIT_Rate\",  // 属性名\r\n            \"value\": 0.097  // 值\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -209,7 +209,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"userName\": \"user\",\r\n    \"damage\": 54000,\r\n    \"criticalRate\": 0.8,\r\n    \"mastery\": 180,\r\n    \"suit\": \"Crimson Witch of Flames\",  // 套装效果（用“None”表示非四件套）\r\n    \"exclude\": []  // 暂时不用实现，传数空列表即可\r\n}",
+							"raw": "{\r\n    \"userName\": \"user1\",\r\n    \"damage\": 54000,\r\n    \"critRate\": 0.8,\r\n    \"mastery\": 180,\r\n    \"set\": \"Crimson Witch of Flames\",  // 套装效果（用“None”表示非四件套）\r\n    \"exclude\": []  // 暂时不用实现，传数空列表即可\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -283,7 +283,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"artifactId\": 3,\r\n    \"suit\": \"Crimson Witch of Flames\",  // 套装\r\n    \"part\": \"flower\",  // 部位\r\n    \"attributes\": [  // 圣遗物属性列表（有且仅有5个对象）\r\n        {\r\n            \"name\": \"health_n\",  // 属性名\r\n            \"value\": 4780  // 值\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"artifactId\": 3,\r\n    \"userName\": \"user1\",\r\n    \"set\": \"Crimson_Witch_of_Flames\",  // 套装\r\n    \"slot\": \"goblet\",  // 部位\r\n    \"mainStat\":  // 圣遗物主属性\r\n    {\r\n        \"name\": \"Pyro\",\r\n        \"value\": 0.466\r\n    },\r\n    \"subStat\":  // 圣遗物副属性列表（有且仅有4个对象）\r\n    [\r\n        {\r\n            \"name\": \"HP\",  // 属性名\r\n            \"value\": 39  // 值\r\n        },\r\n        {\r\n            \"name\": \"HP(%)\",  // 属性名\r\n            \"value\": 0.053  // 值\r\n        },\r\n        {\r\n            \"name\": \"Mastery\",  // 属性名\r\n            \"value\": 40  // 值\r\n        },\r\n        {\r\n            \"name\": \"CRIT_Rate\",  // 属性名\r\n            \"value\": 0.097  // 值\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

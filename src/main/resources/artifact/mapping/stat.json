@@ -1,0 +1,21 @@
+{
+  "1": "HP",
+  "2": "ATK",
+  "3": "DEF",
+  "4": "HP(%)",
+  "5": "ATK(%)",
+  "6": "DEF(%)",
+  "7": "Mastery",
+  "8": "Energy",
+  "9": "CRIT_Rate",
+  "10": "CRIT_DMG",
+  "11": "Pyro",
+  "12": "Hydro",
+  "13": "Dendro",
+  "14": "Electro",
+  "15": "Anemo",
+  "16": "Cryo",
+  "17": "Geo",
+  "18": "Physical",
+  "19": "Healing"
+}

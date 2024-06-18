@@ -29,5 +29,6 @@ CREATE TABLE artifact (
     CHECK (part >= 1 AND part <=5)
 );
 
-INSERT INTO user(user_name, user_password, mail) VALUES('arc', 'A665A45920422F9D417E4867EFDC4FB8A04A1F3FFF1FA07E998E86F7F7A27AE3', 'ruicheng_ao@foxmail.com');  # password is '123'
-INSERT INTO artifact(user_id, suit, part, primary_attribute, primary_value, secondary_attribute1, secondary_value1, secondary_attribute2, secondary_value2, secondary_attribute3, secondary_value3, secondary_attribute4, secondary_value4) VALUES (1, 5, 1, 4, 4780, 3, 0.198, 7, 37,  9, 0.074, 10, 0.054);
+INSERT INTO user(user_name, user_password, mail) VALUES('arc', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'ruicheng_ao@foxmail.com');  # password is '123'
+INSERT INTO user(user_name, user_password, mail) VALUES('user1', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', '2031449330@qq.com');  # password is '123'
+INSERT INTO artifact(user_id, suit, part, primary_attribute, primary_value, secondary_attribute1, secondary_value1, secondary_attribute2, secondary_value2, secondary_attribute3, secondary_value3, secondary_attribute4, secondary_value4) VALUES (1, 30, 4, 11, 0.466, 1, 39, 4, 0.053, 7, 40, 9, 0.097);

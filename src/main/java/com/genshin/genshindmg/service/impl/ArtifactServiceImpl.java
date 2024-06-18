@@ -49,42 +49,46 @@ public class ArtifactServiceImpl extends ServiceImpl<ArtifactMapper, Artifact>
         }
 
         // 检查圣遗物数据是否符合要求
-        if (inputVo.getAttributes().size() != 5) {
+        if (inputVo.getSubStat().size() != 4) {
             log.info("圣遗物词条数目不符合要求");
             throw new ShSystemException(ResultEnum.ARTIFACT_INVALID);
         }
-        if (!TableMappingUtil.hasSuitString(inputVo.getSuit())) {
+        if (!TableMappingUtil.hasSetString(inputVo.getSet())) {
             log.info("圣遗物套装不存在");
             throw new ShSystemException(ResultEnum.ARTIFACT_INVALID);
         }
-        if (!TableMappingUtil.hasPartString(inputVo.getPart())) {
+        if (!TableMappingUtil.hasSlotString(inputVo.getSlot())) {
             log.info("圣遗物部位不存在");
             throw new ShSystemException(ResultEnum.ARTIFACT_INVALID);
         }
-        // attribute检查
+        if (!TableMappingUtil.hasStatString(inputVo.getMainStat().getName()) ||
+                !TableMappingUtil.hasStatString(inputVo.getSubStat().get(0).getName()) ||
+                !TableMappingUtil.hasStatString(inputVo.getSubStat().get(1).getName()) ||
+                !TableMappingUtil.hasStatString(inputVo.getSubStat().get(2).getName()) ||
+                !TableMappingUtil.hasStatString(inputVo.getSubStat().get(3).getName())) {
+            log.info("圣遗物属性名错误");
+            throw new ShSystemException(ResultEnum.ARTIFACT_INVALID);
+        }
 
         // 保存圣遗物数据
         Artifact a = new Artifact();
         a.setUserId(user.getUserId());
-        a.setSuit(TableMappingUtil.getSuitInt(inputVo.getSuit()));
-        a.setPart(TableMappingUtil.getPartInt(inputVo.getPart()));
-        a.setPrimaryAttribute(1);
-        a.setSecondaryAttribute1(2);
-        a.setSecondaryAttribute2(3);
-        a.setSecondaryAttribute3(4);
-        a.setSecondaryAttribute4(5);
-        a.setPrimaryValue(inputVo.getAttributes().get(0).getValue());
-        a.setSecondaryValue1(inputVo.getAttributes().get(1).getValue());
-        a.setSecondaryValue2(inputVo.getAttributes().get(2).getValue());
-        a.setSecondaryValue3(inputVo.getAttributes().get(3).getValue());
-        a.setSecondaryValue4(inputVo.getAttributes().get(4).getValue());
+        a.setSuit(TableMappingUtil.getSetInt(inputVo.getSet()));
+        a.setPart(TableMappingUtil.getSlotInt(inputVo.getSlot()));
+        a.setPrimaryAttribute(TableMappingUtil.getStatInt(inputVo.getMainStat().getName()));
+        a.setSecondaryAttribute1(TableMappingUtil.getStatInt(inputVo.getSubStat().get(0).getName()));
+        a.setSecondaryAttribute2(TableMappingUtil.getStatInt(inputVo.getSubStat().get(1).getName()));
+        a.setSecondaryAttribute3(TableMappingUtil.getStatInt(inputVo.getSubStat().get(2).getName()));
+        a.setSecondaryAttribute4(TableMappingUtil.getStatInt(inputVo.getSubStat().get(3).getName()));
+        a.setPrimaryValue(inputVo.getMainStat().getValue());
+        a.setSecondaryValue1(inputVo.getSubStat().get(0).getValue());
+        a.setSecondaryValue2(inputVo.getSubStat().get(1).getValue());
+        a.setSecondaryValue3(inputVo.getSubStat().get(2).getValue());
+        a.setSecondaryValue4(inputVo.getSubStat().get(3).getValue());
         if (1 != artifactMapper.insert(a)) {
             throw new ShSystemException(ResultEnum.INSERT);
         }
         return true;
     }
 }
-
-
-
 
